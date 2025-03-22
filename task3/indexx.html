@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Circle Design</title>
+    <style>
+        body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.circle {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 15px solid blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle::before,
+.circle::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+}
+
+.circle::before {
+    width: 180px;
+    height: 180px;
+    background-color: transparent;
+    border: 15px solid red;
+    top: 10px;
+    left: 10px;
+}
+
+.circle::after {
+    width: 160px;
+    height: 160px;
+    background-color: white;
+    top: 20px;
+    left: 20px;
+}
+
+.circle-inner {
+    position: relative;
+    z-index: 1;
+}
+
+.circle-inner p {
+    font-size: 24px;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    color: black;
+    margin: 0;
+}
+
+    </style>
+</head>
+<body>
+    <div class="circle">
+        <div class="circle-inner">
+            <p>Elzero</p>
+        </div>
+    </div>
+</body>
+</html>
