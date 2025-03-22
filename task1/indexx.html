@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f8f8;
+        }
+        .container {
+            width: 350px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+        }
+        .social-buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+        .social-buttons button {
+            flex: 1;
+            padding: 10px;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        .facebook {
+            background-color: #3b5998;
+        }
+        .twitter {
+            background-color: #1da1f2;
+        }
+        p {
+            font-size: 14px;
+            margin: 10px 0;
+        }
+        input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .login-options {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+        }
+        .login-btn {
+            background-color: #0044cc;
+            color: white;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .sign-up {
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="social-buttons">
+            <button class="facebook"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Facebook_logo_%28square%29.png"width="15px" height="15px"> Login to Facebook</button>
+            <button class="twitter"><img src="data:image/png;base64,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" width="15px" height="15px"> Login to Twitter</button>
+        </div>
+        <p><b>Or</b></p>
+        <form>
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <div class="login-options">
+                <label><input type="checkbox"> Keep me signed in</label>
+                <a href="#">Forgot Your Password?</a>
+            </div>
+            <button class="login-btn">Login</button>
+        </form>
+        <p class="sign-up">Not a member? <a href="#">Sign up now!</a></p>
+    </div>
+</body>
+</html>
